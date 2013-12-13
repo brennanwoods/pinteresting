@@ -1,5 +1,12 @@
 Pinteresting::Application.routes.draw do
-  # The priority is based upon order of creation: first created -> highest priority.
+  root "pages#home" #root_path
+  get "about" => "pages#about" #creates about_path
+
+#makes this the root so the ruby "Welcome Aboard" page isn't the home page!
+#  get "pages/home"
+#this was created with the "rails generate controller pages home" command
+
+# The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
@@ -53,4 +60,8 @@ Pinteresting::Application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+
+
+
+
 end
